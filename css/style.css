@@ -70,6 +70,7 @@ section{
     border-radius: 9px;
     margin: 5px;
     min-width: 220px
+    
  
 }
 .prato > img{
@@ -113,6 +114,12 @@ section{
     width: 180px;
 }
 
+.prato > div > ion-icon{
+    color: #FFFFFF;
+    background-color: green;
+    border-radius: 50%;
+}
+
 .preco{
 
     display: block;
@@ -135,4 +142,22 @@ section{
     width: 70%;
     height: 40%;
     border-radius: 20px;
+}
+
+.sumido{
+    display: none;
+}
+h2{
+    font-family: 'Righteous';
+    font-style: normal;
+    font-weight: 600;
+    font-size: 26px;
+    line-height: 32px;
+    letter-spacing: 0.018em;
+
+color: #333333;
+}
+
+section, h2{
+    margin-left: 12px;
 }
