@@ -4,7 +4,7 @@ function selecionarPrato(element){
    
     const pratoSelecionado = document.querySelector(".comida .selecionado")
 
-    if(pratoSelecionado !== null ){
+    if(pratoSelecionado !== null && pratoSelecionado !== element && pratoSelecionado !== element ){
         pratoSelecionado.classList.remove("selecionado");
         pratoSelecionado.querySelector("ion-icon").classList.add("sumido");
        pedido--;
@@ -24,10 +24,7 @@ function selecionarBebida(element){
    
     const pratoSelecionado = document.querySelector(".bebida .selecionado")
 
-    element.classList.toggle("selecionado");
-    element.querySelector("ion-icon").classList.toggle("sumido");
-
-    if(pratoSelecionado !== null ){
+    if(pratoSelecionado !== null && pratoSelecionado !== element  ){
         pratoSelecionado.classList.remove("selecionado");
         pratoSelecionado.querySelector("ion-icon").classList.add("sumido");
        pedido--;
@@ -46,12 +43,8 @@ function selecionarBebida(element){
 function selecionarSobremesa(element){
    
     const pratoSelecionado = document.querySelector(".sobremesa .selecionado")
-
-    element.classList.toggle("selecionado");
-    element.querySelector("ion-icon").classList.toggle("sumido");
-
   
-    if(pratoSelecionado !== null ){
+    if(pratoSelecionado !== null && pratoSelecionado !== element ){
         pratoSelecionado.classList.remove("selecionado");
         pratoSelecionado.querySelector("ion-icon").classList.add("sumido");
        pedido--;
