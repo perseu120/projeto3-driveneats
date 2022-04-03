@@ -8,6 +8,11 @@
 
     <link rel="stylesheet" href="css/reset.css">
     <link rel="stylesheet" href="css/style.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Encode+Sans:wght@100;200;300;400;500;600;700&family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;1,100;1,300;1,400;1,500;1,700&display=swap"
+        rel="stylesheet">
 
 
     <title>DrivenEats</title>
@@ -26,9 +31,9 @@
             <h2>
                 Primeiro, seu prato
             </h2>
-            <section>
+            <section class="comida">
 
-                <div class="prato">
+                <div onclick="selecionarPrato(this)" class="prato" >
                     <img src="imagem/hamburguer.png" alt="">
                     <h5>Hamburguer</h5>
                     <p class="descricao">acompanha batata</p>
@@ -41,7 +46,7 @@
 
                 </div>
 
-                <div class="prato">
+                <div onclick="selecionarPrato(this)" class="prato">
                     <img src="imagem/hamburguer.png" alt="">
                     <h5>Hamburguer</h5>
                     <p class="descricao">acompanha batata</p>
@@ -54,7 +59,7 @@
 
                 </div>
 
-                <div class="prato">
+                <div onclick="selecionarPrato(this)" class="prato">
                     <img src="imagem/hamburguer.png" alt="">
                     <h5>Hamburguer</h5>
                     <p class="descricao">acompanha batata</p>
@@ -67,7 +72,7 @@
 
                 </div>
 
-                <div class="prato">
+                <div onclick="selecionarPrato(this)" class="prato">
                     <img src="imagem/hamburguer.png" alt="">
                     <h5>Hamburguer</h5>
                     <p class="descricao">acompanha batata</p>
@@ -81,11 +86,12 @@
                 </div>
 
             </section>
+
             <h2>
-               Agora, sua sobremesa
+                Agora, sua sobremesa
             </h2>
-            <section>
-                <div class="prato">
+            <section class="bebida">
+                <div onclick=" selecionarBebida(this)" class="prato">
                     <img src="imagem/hamburguer.png" alt="">
                     <h5>Hamburguer</h5>
                     <p class="descricao">acompanha batata</p>
@@ -98,7 +104,7 @@
 
                 </div>
 
-                <div class="prato">
+                <div onclick=" selecionarBebida(this)" class="prato">
                     <img src="imagem/hamburguer.png" alt="">
                     <h5>Hamburguer</h5>
                     <p class="descricao">acompanha batata</p>
@@ -111,7 +117,7 @@
 
                 </div>
 
-                <div class="prato">
+                <div onclick=" selecionarBebida(this)" class="prato">
                     <img src="imagem/hamburguer.png" alt="">
                     <h5>Hamburguer</h5>
                     <p class="descricao">acompanha batata</p>
@@ -124,7 +130,7 @@
 
                 </div>
 
-                <div class="prato">
+                <div onclick="selecionarBebida(this)" class="prato">
                     <img src="imagem/hamburguer.png" alt="">
                     <h5>Hamburguer</h5>
                     <p class="descricao">acompanha batata</p>
@@ -141,8 +147,8 @@
             <h2>
                 Por fim, sua sobremesa
             </h2>
-            <section>
-                <div class="prato">
+            <section class="sobremesa">
+                <div onclick="selecionarSobremesa(this)" class="prato">
                     <img src="imagem/hamburguer.png" alt="">
                     <h5>Hamburguer</h5>
                     <p class="descricao">acompanha batata</p>
@@ -155,7 +161,7 @@
 
                 </div>
 
-                <div class="prato">
+                <div onclick="selecionarSobremesa(this)" class="prato">
                     <img src="imagem/hamburguer.png" alt="">
                     <h5>Hamburguer</h5>
                     <p class="descricao">acompanha batata</p>
@@ -168,7 +174,7 @@
 
                 </div>
 
-                <div class="prato">
+                <div onclick="selecionarSobremesa(this)" class="prato">
                     <img src="imagem/hamburguer.png" alt="">
                     <h5>Hamburguer</h5>
                     <p class="descricao">acompanha batata</p>
@@ -181,7 +187,7 @@
 
                 </div>
 
-                <div class="prato">
+                <div onclick="selecionarSobremesa(this)" class="prato">
                     <img src="imagem/hamburguer.png" alt="">
                     <h5>Hamburguer</h5>
                     <p class="descricao">acompanha batata</p>
@@ -199,12 +205,12 @@
 
         <footer class="rodaPe">
 
-            <button>selecione os 3 itens para fechar o pedido</button>
+            <button class="fundorBotao" >selecione os 3 itens para fechar o pedido</button>
 
         </footer>
     </div>
     <script src="https://unpkg.com/ionicons@5.4.0/dist/ionicons.js"></script>
-    <script src="script.js"></script>
+    <script src="js/script.js"></script>
 
 </body>
 
