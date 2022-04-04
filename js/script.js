@@ -120,8 +120,8 @@ function cancelarPopup(){
 
 function enviarPedido(){
     
-    const nome = prompt("qual seu nome?");
-    const rua = prompt("qual o seu endereço");
+    const nome = window.prompt("qual seu nome?");
+    const rua = window.prompt("qual o seu endereço");
 
     console.log(rua);
 
