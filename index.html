@@ -1,6 +1,6 @@
 <!DOCTYPE html>
 <html lang="en">
-
+<!-- tegs referente a importação e configuração do html -->
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
@@ -20,7 +20,7 @@
 </head>
 
 <body>
-
+<!-- popup para para confirmar o pedido -->
     <div id="janelaPopup" class="conteinerPopup oculpatPopup">
         <div  class="janelaPopup ">
 
@@ -58,9 +58,9 @@
         
     </div>
    
-
+<!-- teg que contem todos os componentes da tela -->
     <div class="main">
-
+<!-- titulo da pagina -->
         <header class="topo">
             <h1>DrivenEats</h1>
             <h4>sua comida em 6min</h4>
@@ -70,6 +70,7 @@
             <h2>
                 Primeiro, seu prato
             </h2>
+            <!-- sessão onde contem todos os pratos referente a comida -->
             <section class="comida">
 
                 <div onclick="selecionarPrato(this)" class="prato">
@@ -126,6 +127,7 @@
 
             </section>
 
+            <!-- sessão onde contem todos os pratos referente a bebida -->
             <h2>
                 Agora, sua Bebida
             </h2>
@@ -182,6 +184,7 @@
                 </div>
             </section>
 
+            <!-- sessão onde contem todos os pratos referente a sobremesa -->
             <h2>
                 Por fim, sua sobremesa
             </h2>
@@ -241,6 +244,7 @@
 
         </div>
 
+        <!-- roda pe da pagina, ou a barra inferior -->
         <footer class="rodaPe">
 
             <button class="fundorBotao" onclick="popup()">selecione os 3 itens para fechar o
@@ -251,6 +255,8 @@
 
         </footer>
     </div>
+
+    <!-- arquivos de importação do java script -->
     <script src="https://unpkg.com/ionicons@5.4.0/dist/ionicons.js"></script>
     <script src="js/script.js"></script>
 

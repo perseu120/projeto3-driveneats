@@ -1,5 +1,6 @@
-let pedido = Number(0);
 
+// declaraão de variaveis #inicio#
+let pedido = Number(0);
 let nomeComida;
 let nomeBebida;
 let nomeSobremesa;
@@ -8,7 +9,10 @@ let valor1;
 let valor2;
 let valor3;
 let mensagem= "";
+// declaraão de variaveis #fim#
 
+
+// função que vai verificar se o prato da sessão comida esta selecionado, e selecionar ou deselecionar
 function selecionarPrato(element){
    
     const pratoSelecionado = document.querySelector(".comida .selecionado")
@@ -28,6 +32,8 @@ function selecionarPrato(element){
     ativarBotao()
 
 }
+
+// função que vai verificar se o prato da sessão bebidas esta selecionado, e selecionar ou deselecionar
 
 function selecionarBebida(element){
    
@@ -49,6 +55,8 @@ function selecionarBebida(element){
    
 }
 
+// função que vai verificar se o prato da sessão sobremesa esta selecionado, e selecionar ou deselecionar
+
 function selecionarSobremesa(element){
    
     const pratoSelecionado = document.querySelector(".sobremesa .selecionado")
@@ -68,7 +76,7 @@ function selecionarSobremesa(element){
     ativarBotao()
 }
 
-
+// verifica se o contador esta igual a 3 e se estiver ele ativa o botão de fazer o pedido caso contrario botao fica desativado
 function ativarBotao(){    
 
     const btn = document.querySelector('.rodaPe button');
@@ -88,6 +96,8 @@ function ativarBotao(){
     } 
 }
 
+
+// função que vai emitir o popup para confirmação do pedido
 function popup() {
     let popup = document.getElementById("janelaPopup");
     popup.classList.remove("oculpatPopup");
@@ -111,12 +121,16 @@ function popup() {
     document.getElementById("total").innerHTML = `R$ ${valorTotal}`;
 }
 
+// botão de cancelar do pop para voltar a tela inicial desativando o popup
+
 function cancelarPopup(){
     let popup = document.getElementById("janelaPopup");
     popup.classList.add("oculpatPopup");
 
     
 }
+
+// enviar o pedido com os itens para a  api do whatapp e pede o endereço e o nome do cliente
 
 function enviarPedido(){
     
@@ -134,8 +148,9 @@ function enviarPedido(){
     mensagem += `\n\n Endereço: ${rua}`
 
     mensagem = encodeURIComponent(mensagem);
-
+    
     window.open(`https://wa.me/5573999059366?text=${mensagem}`);
+    document.getElementById("janelaPopup").classList.add("oculpatPopup");
 }
 
 
