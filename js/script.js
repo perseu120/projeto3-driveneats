@@ -4,6 +4,10 @@ let nomeComida;
 let nomeBebida;
 let nomeSobremesa;
 let valorTotal;
+let valor1;
+let valor2;
+let valor3;
+let mensagem= "";
 
 function selecionarPrato(element){
    
@@ -84,23 +88,37 @@ function ativarBotao(){
     } 
 }
 
-function enviarPedido(){
-
-    let valor1;
-    let valor2;
-    let valor3;
-    let mensagem= "";
+function popup() {
+    let popup = document.getElementById("janelaPopup");
+    popup.classList.remove("oculpatPopup");
 
     nomeComida = document.querySelector(".comida .selecionado h5").innerHTML;
     valor1 = document.querySelector(".comida .selecionado .preco").innerHTML.replace(/R\$ /, "").replace(/,/, ".");
+    document.getElementById("comida").innerHTML = nomeComida;
+    document.getElementById("valorComida").innerHTML = document.querySelector(".comida .selecionado .preco").innerHTML;
 
     nomeBebida = document.querySelector(".bebida .selecionado h5").innerHTML;
     valor2 = document.querySelector(".bebida .selecionado .preco").innerHTML.replace(/R\$ /, "").replace(/,/, ".");;
+    document.getElementById("bebida").innerHTML = nomeBebida;
+    document.getElementById("valorBebida").innerHTML = document.querySelector(".bebida .selecionado .preco").innerHTML;
 
     nomeSobremesa = document.querySelector(".sobremesa .selecionado h5").innerHTML;
     valor3 = document.querySelector(".sobremesa .selecionado .preco").innerHTML.replace(/R\$ /, "").replace(/,/, ".");;
+    document.getElementById("sobremesa").innerHTML = nomeSobremesa;
+    document.getElementById("valorSobremesa").innerHTML = document.querySelector(".sobremesa .selecionado .preco").innerHTML;
 
     valorTotal = Number(valor1) + Number(valor2) + Number(valor3);
+    document.getElementById("total").innerHTML = `R$ ${valorTotal}`;
+}
+
+function cancelarPopup(){
+    let popup = document.getElementById("janelaPopup");
+    popup.classList.add("oculpatPopup");
+
+    
+}
+
+function enviarPedido(){
     
     mensagem += "Olá, gostaria de fazer o pedido:";
     mensagem += `\n - Prato: ${nomeComida}`;
@@ -112,4 +130,6 @@ function enviarPedido(){
 
     window.open(`https://wa.me/5573999059366?text=${mensagem}`);
 }
+
+
 

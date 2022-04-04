@@ -1,9 +1,11 @@
+/* importando as fontes necessarias */
 @import url('https://fonts.googleapis.com/css2?family=Encode+Sans:wght@100;200;300;400;500;600;700&family=Righteous&family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;1,100;1,300;1,400;1,500;1,700&display=swap');
 
 
 *{
     box-sizing: border-box;
 }
+/* fazendo o estilo da barra que fica no topo */
 .topo{
     background-color: #CF2B2B;
     width: 100%;
@@ -35,7 +37,7 @@
     line-height: 21px;
     color: #FFFFFF;
 }
-
+/* estilo do conteudo da pagina, todos os itens disponivel para venda */
 .container{
     margin-top: 85px;
     margin-bottom: 95px;
@@ -43,7 +45,7 @@
     overflow: hidden;
     
 }
-
+/* estilo da barra que ficar em baixo */
 .rodaPe{
     position: fixed;
     width: 100%;
@@ -54,12 +56,31 @@
     background: #FFFFFF;
 }
 
+.rodaPe{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.rodaPe > button{
+    width: 70%;
+    height: 60%;
+    flex-wrap: wrap;
+    margin: 15px 25px;
+    border-radius: 30.5px;
+    border: none;
+}
+
+/* sesão onde fica cada comida de sua categoria */
+
 section{
     display: flex;
     width: 100%;
     height:320px;
     overflow-x: scroll;
 }
+
+/* estilos relacionados a cada prato de comida */
 
 .prato{
     display: flex;
@@ -76,6 +97,7 @@ section{
     cursor: pointer;
  
 }
+/* imagem do prato */
 .prato > img{
     margin-top: 12px;
     width: 80%;
@@ -85,7 +107,7 @@ section{
     border-radius: 9px;
     object-fit: cover;
 }
-
+/* descrição do que vai no pedido */
 .prato .descricao{
     display: inline-block;
     width: 80%;
@@ -96,7 +118,7 @@ section{
     line-height: 18px;
     color: #A6A6A6;
 }
-
+/* titilo com o nome do prato */
 .prato > h5{
     width: 80%;
     height: 23px;
@@ -122,6 +144,7 @@ section{
     background-color: green;
     border-radius: 50%;
 }
+/* estilos relacionado ao preço do prato */
 
 .preco{
 
@@ -135,33 +158,23 @@ section{
     line-height: 19px;
     color: #000000;
 }
-.rodaPe{
-    display: flex;
-    justify-content: center;
-    align-items: center;
-}
-
-.rodaPe > button{
-    width: 70%;
-    height: 60%;
-    flex-wrap: wrap;
-    margin: 15px 25px;
-    border-radius: 30.5px;
-    border: none;
-}
 
 .fundorBotao{
     background-color: #CBCBCB;
     color: #000000;
 }
 
+/* para fazer o icone de check ficar sem aparecer */
 .sumido{
     display: none;
 }
 
+/* criar a borda por fora para selecionar o prato */
 .selecionado{
     box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25), inset 0px 0px 0px 5px #32B72F;
 }
+
+/* para ativar o botão depois de selecionar os itens */
 .cursor{
     cursor: pointer;
     background-color: #32B72F;
@@ -185,4 +198,125 @@ h2{
 
 section, h2{
     margin-left: 12px;
+}
+
+/* janela para fazer o popup de confirmar pedido */
+.conteinerPopup{
+    position: fixed;
+    width: 100%;
+    height: 100%;
+    left: 0px;
+    top: 0px;
+    right: 0px;
+    bottom: 0px;
+    background: rgba(255, 255, 255, 0.9);
+    z-index: 2;
+}
+.janelaPopup{
+    width: 377px;
+    height: 353px;
+    background: #50D074;
+    box-shadow: 0px 0px 10px 1px rgba(0, 0, 0, 0.25);
+    border-radius: 9px;
+    z-index: 3;
+    margin: auto auto;
+    padding-top: 20px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+
+}
+
+.janelaPopup > p{
+    width: 376px;
+    height: 27px;
+    font-family: 'Roboto';
+    font-style: normal;
+    font-weight: 700;
+    font-size: 22px;
+    line-height: 26px;
+    text-align: center;
+
+    color: #FFFFFF;
+}
+.btnCancelarPopup{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    cursor: pointer;
+    width: 50%;
+    height: 52px;
+    font-family: 'Roboto';
+    font-style: normal;
+    font-weight: 700;
+    font-size: 20px;
+    line-height: 23px;
+    letter-spacing: 0.018em;
+    color: #FFFFFF;
+}
+
+.btnConfirmarPopup{
+
+    width: 329px;
+    height: 52px;
+    cursor: pointer;
+    font-family: 'Roboto';
+    font-style: normal;
+    font-weight: 700;
+    font-size: 22px;
+    line-height: 26px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    letter-spacing: 0.018em;
+    color: #50D074;
+    background: #FFFFFF;
+    border-radius: 100px;
+}
+.acaoPedido{
+
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: center;
+    
+}
+
+.conteudoPopup{
+    display: flex;
+    justify-content: space-between;
+    margin: 12px 50px;
+
+}
+
+.oculpatPopup{
+    display: none;
+}
+
+.total{
+    font-family: 'Roboto';
+    font-style: normal;
+    font-weight: 700;
+    font-size: 22px;
+    line-height: 26px;
+    letter-spacing: 0.018em;
+
+    color: #FFFFFF;
+}
+
+.itensPedido{
+    font-family: 'Roboto';
+    font-style: normal;
+    font-weight: 400;
+    font-size: 22px;
+    line-height: 26px;
+    letter-spacing: 0.018em;
+
+    color: #FFFFFF;
 }

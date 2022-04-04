@@ -20,6 +20,45 @@
 </head>
 
 <body>
+
+    <div id="janelaPopup" class="conteinerPopup oculpatPopup">
+        <div  class="janelaPopup ">
+
+            <p>Confirme seu pedido</p>
+    
+            <div class="conteudoPopup">
+                <p class="itensPedido" id="comida">afafaf</p>
+                <p class="itensPedido" id="valorComida"> bbbbbbb</p>
+            </div>
+
+            <div class="conteudoPopup">
+                <p class="itensPedido" id="bebida">afafaf</p>
+                <p class="itensPedido" id="valorBebida"> bbbbbbb</p>
+            </div>
+
+            <div class="conteudoPopup">
+                <p class="itensPedido" id="sobremesa">afafaf</p>
+                <p class="itensPedido" id="valorSobremesa"> bbbbbbb</p>
+            </div>
+
+            <div class="conteudoPopup">
+                <p class="total">Total</p>
+                <p class="total" id="total"> </p>
+            </div>
+    
+            <div class="acaoPedido">
+                <button class="btnConfirmarPopup" onclick="enviarPedido()">
+                    Confirmar
+                </button>
+                <a class="btnCancelarPopup" onclick="cancelarPopup()"> Cancelar </a>
+    
+            </div>
+    
+        </div>
+        
+    </div>
+   
+
     <div class="main">
 
         <header class="topo">
@@ -33,7 +72,7 @@
             </h2>
             <section class="comida">
 
-                <div onclick="selecionarPrato(this)" class="prato" >
+                <div onclick="selecionarPrato(this)" class="prato">
                     <img src="imagem/hamburguer.png" alt="">
                     <h5>Hamburguer</h5>
                     <p class="descricao">acompanha batata</p>
@@ -205,7 +244,11 @@
 
         <footer class="rodaPe">
 
-            <button class="fundorBotao" onclick="enviarPedido()" >selecione os 3 itens para fechar o pedido</button>
+            <button class="fundorBotao" onclick="popup()">selecione os 3 itens para fechar o
+                pedido
+            </button>
+
+
 
         </footer>
     </div>
