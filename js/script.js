@@ -120,11 +120,16 @@ function cancelarPopup(){
 
 function enviarPedido(){
     
+    const nome = prompt("qual seu nome?");
+    const rua = prompt("qual o seu endereço");
+
     mensagem += "Olá, gostaria de fazer o pedido:";
     mensagem += `\n - Prato: ${nomeComida}`;
     mensagem += `\n - Bebida: ${nomeBebida}`
     mensagem += `\n - Sobremesa: ${nomeSobremesa}`
     mensagem += `\n - Total: R$ ${valorTotal}`
+    mensagem += `\n\n Nome: ${nome}`
+    mensagem += `\n\n Endereço: ${rua}`
 
     mensagem = encodeURIComponent(mensagem);
 
