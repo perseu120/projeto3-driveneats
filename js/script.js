@@ -123,6 +123,8 @@ function enviarPedido(){
     const nome = prompt("qual seu nome?");
     const rua = prompt("qual o seu endereço");
 
+    console.log(rua);
+
     mensagem += "Olá, gostaria de fazer o pedido:";
     mensagem += `\n - Prato: ${nomeComida}`;
     mensagem += `\n - Bebida: ${nomeBebida}`
